@@ -20,6 +20,7 @@
         </header>
         <!-- /header -->
         <article data-role="content">
+
             <ul id="placeList" data-role="listview">
                 <!-- <li>
                     <a href="#">
@@ -33,13 +34,18 @@
         </article>
         <!-- /content -->
         <footer data-role="footer" data-position="fixed">
-            <a href="#author" class="ui-btn ui-corner-all">ผู้จัดทำ</a>
+            <a href="#author" class="ui-btn ui-corner-all" data-transition="slide">ผู้จัดทำ</a>
         </footer>
         <!-- /footer -->
     </section>
     <!-- /page -->
+
+
+    <!-- Page 2: Detail Place -->
+
     <section id="detail" data-role="page">
         <header data-role="header">
+            <a href="#" class="ui-btn ui-icon-carat-l" data-rel="back">Back</a>
             <h1>Header</h1>
         </header>
         <!-- /header -->
@@ -48,18 +54,31 @@
         </article>
         <!-- /content -->
         <footer data-role="footer" data-position="fixed">
-            <a href="#author" class="ui-btn ui-corner-all">ผู้จัดทำ</a>
+            <a href="#author" class="ui-btn ui-corner-all" data-transition="slide">ผู้จัดทำ</a>
         </footer>
         <!-- /footer -->
     </section>
     <!-- /page -->
+
+
+
+
+    <!-- Page 3: Author page -->
+
     <section id="author" data-role="page" dialog="true">
         <header data-role="header">
+            <a href="#" class="ui-btn ui-icon-chevron-left" data-rel="back" >Back</a>
             <h1>ผู้จัดทำ</h1>
         </header>
         <!-- /header -->
         <article data-role="content">
-            <p>Content</p>
+            <div class="thumb">
+                <img src="#"/>
+            </div>
+            <div data-role="controlgroup">
+                <a href="tel:083-071-3373" class="ui-btn ui-corner-all">Call</a>
+                <a href="mailto:teerasej@nextflow.in.th" class="ui-btn ui-corner-all">Email</a>
+            </div>
         </article>
         <!-- /content -->
         <footer data-role="footer" data-position="fixed">

@@ -1,32 +1,41 @@
 $(document).ready(function() {
 
-            console.log('ready');
+    console.log('ready');
 
-            $.mobile.loading('show');
+$( document ).on( "pagecontainerbeforeshow", function ( event, ui ) {
+  
+	console.log('showing');
+  // $(".foo", ui.prevPage ).val(""); /* reset value of .foo element on current page */
+});
 
-            $.getJSON('data/place.js', function(data) {
 
-                $.mobile.loading('hide');
 
-                $('#placeList').html('');
-                var item;
-                var link;
 
-                $.each(data, function(index, val) {
-                    // console.log(val.name);
-                    item = $('<li></li>');
-                    
-                    link = $('<a href="#"></a>');
+    $.mobile.loading('show');
 
-                    link.append('<img src="#">');
-                    link.append('<h2>Broken Bells</h2>');
-                    link.append('<p>Broken Bells</p>');
+    $.getJSON('data/place.js', function(data) {
 
-                    item.append(link);
-                    $('#placeList').append(item);
-                });
+        $.mobile.loading('hide');
 
-                // Refresh Listview
-                $('#placeList').listview('refresh');
-            });
+        $('#placeList').html('');
+        var item;
+        var link;
+
+        $.each(data, function(index, val) {
+            // console.log(val.name);
+            item = $('<li></li>');
+
+            link = $('<a href="#detail" data-transition="slide"></a>');
+
+            link.append('<img src="assets/images/' + val.thumbFile + '">');
+            link.append('<h2>' + val.name + '</h2>');
+            link.append('<p>' + val.description + '</p>');
+
+            item.append(link);
+            $('#placeList').append(item);
         });
+
+        // Refresh Listview
+        $('#placeList').listview('refresh');
+    });
+});
