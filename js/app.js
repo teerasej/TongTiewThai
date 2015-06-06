@@ -2,11 +2,11 @@ $(document).ready(function() {
 
     console.log('ready');
 
-$( document ).on( "pagecontainerbeforeshow", function ( event, ui ) {
-  
-	console.log('showing');
-  // $(".foo", ui.prevPage ).val(""); /* reset value of .foo element on current page */
-});
+    $(document).on("pagecontainerbeforeshow", function(event, ui) {
+
+        console.log('showing');
+        // $(".foo", ui.prevPage ).val(""); /* reset value of .foo element on current page */
+    });
 
 
 
@@ -29,7 +29,7 @@ $( document ).on( "pagecontainerbeforeshow", function ( event, ui ) {
 
             link.append('<img src="assets/images/' + val.thumbFile + '">');
             link.append('<h2>' + val.name + '</h2>');
-            link.append('<p>' + val.description + '</p>');
+            // link.append('<p>' + val.description + '</p>');
 
             item.append(link);
             $('#placeList').append(item);
