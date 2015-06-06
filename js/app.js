@@ -16,17 +16,26 @@
 // Resource URL: http://th.wikipedia.org/wiki/ไหว้พระ_9_วัด_กรุงเทพมหานคร
 
 var places;
+var selectedPlace;
 
 $(document).ready(function() {
 
     console.log('ready');
 
-    $(document).on("pagecontainerbeforeshow", function(event, ui) {
+    $(document).on('pagecontainerbeforehide', function(event, ui) {
 
-        console.log('showing');
-        // $(".foo", ui.prevPage ).val(""); /* reset value of .foo element on current page */
+        var nextPage = ui.nextPage[0];
+        var prevPage = ui.prevPage[0];
+
+        // console.log('Previous page: ' + prevPage.id);
+        // console.log('Next page: ' + nextPage.id);
+
+        // Get place object to show in detail page.
+        if (nextPage.id == 'detail') {
+        	$(nextPage).find('header h1').html(selectedPlace.name);
+        }
+
     });
-
 
 
 
@@ -37,7 +46,7 @@ $(document).ready(function() {
         $.mobile.loading('hide');
 
         // Keep in global variable
-        placeList = data;
+        places = data;
 
         //// Start populate place view
 
@@ -61,5 +70,14 @@ $(document).ready(function() {
 
         // Refresh Listview
         $('#placeList').listview('refresh');
+
+        $('#placeList').on('click', ' > li', function() {
+            var selected_index = $(this).index();
+            console.log('Selected id: ' + selected_index);
+
+            selectedPlace = places[selected_index];
+
+            console.log('Selected place: ' + selectedPlace.name);
+        });
     });
 });
