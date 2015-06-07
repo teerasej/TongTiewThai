@@ -31,7 +31,8 @@ $(document).ready(function() {
         // console.log('Next page: ' + nextPage.id);
 
         if (nextPage.id == 'author') {
-        	$(nextPage).find('.profile').css('background-image', 'url(assets/images/profile.jpg');
+        	console.log('Author!')
+        	$(nextPage).find('.profile').css('background-image', 'url(assets/images/profile.jpg)');
         }
 
         // Get place object to show in detail page.
@@ -42,8 +43,6 @@ $(document).ready(function() {
 
         	// Set image's source with place's photo path
         	$(nextPage).find('.cover').css('background-image', 'url(assets/images/' + selectedPlace.imageFile + ')');
-        	$(nextPage).find('.cover').css('-webkit-background-size', 'cover');
-        	$(nextPage).find('.cover').css('background-size', 'cover');
         	
         	// Set description with place's content
         	$(nextPage).find('article p').html(selectedPlace.description);

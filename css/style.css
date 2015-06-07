@@ -1,14 +1,32 @@
 #detail .cover {
+    
     width: 100%;
     height: 300px;
+    
     background-color: yellow;
     background-repeat: no-repeat;
     background-position: center center;
+    
+    -webkit-background-size: cover;
+    background-size: cover;
+}
+
+.center {
+	text-align: center;
 }
 
 .circle {
-    border-radius: 50%;
+
+    margin: 20px auto;
     width: 150px;
     height: 150px;
-    /* width and height can be anything, as long as they're equal */
+
+    background-color: yellow;
+    background-position: center center;
+
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+
+    -webkit-background-size: cover;
+    background-size: cover;
 }
