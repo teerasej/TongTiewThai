@@ -1,5 +1,9 @@
 // Copyright (C) 2015  Teerasej Jiraphatchandej
 
+// www.nextflow.in.th
+
+// Contact for consult and training service: 083-071-3373, Email: training@nextflow.in.th
+
 // This program is free software: you can redistribute it and/or modify it
 // under the terms of the GNU General Public License as published by the Free
 // Software Foundation, either version 3 of the License, or (at your option)
@@ -12,6 +16,7 @@
 
 // You should have received a copy of the GNU General Public License along
 // with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 
 // Resource URL: http://th.wikipedia.org/wiki/ไหว้พระ_9_วัด_กรุงเทพมหานคร
 
